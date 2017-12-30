@@ -2,7 +2,7 @@
 
 mvn -f ../../pom.xml clean package;
 
-java -Xms16m -Xmx16m -cp ../../target/jargon2-examples-1.0.0.jar com.kosprov.jargon2.examples.MultiThreadedHashVerifyLoop \
+java -Xms16m -Xmx16m -cp ../../target/jargon2-examples-1.0.1.jar com.kosprov.jargon2.examples.MultiThreadedHashVerifyLoop \
     --backend com.kosprov.jargon2.examples.MultiThreadedHashVerifyLoop\$DummyBackend \
     --runtime 7200 \
     --collectStats 60 \

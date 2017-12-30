@@ -16,7 +16,7 @@ This class is the `Main-Class` of the (fat) jar produced, so it can be executed 
 
 ```bash
 mvn clean package;
-echo -n "password" | java -jar target/jargon2-examples-1.0.0.jar somesalt -t 2 -m 16 -p 4 -l 24
+echo -n "password" | java -jar target/jargon2-examples-1.0.1.jar somesalt -t 2 -m 16 -p 4 -l 24
 ```  
 
 The output is:
@@ -38,7 +38,7 @@ Class `com.kosprov.jargon2.examples.StressTest` implements a microbenchmark of J
 
 ```bash
 mvn clean package;
-java -server -Xms512m -Xmx512m -cp target/jargon2-examples-1.0.0.jar com.kosprov.jargon2.examples.StressTest \
+java -server -Xms512m -Xmx512m -cp target/jargon2-examples-1.0.1.jar com.kosprov.jargon2.examples.StressTest \
     --iterations 100 \
     --outputType encoded \
     --saltLength 16 \
@@ -95,7 +95,7 @@ For example, 4 Java threads executing a hash/verify loop for 2 hours with modera
 ```bash
 mvn clean package;
 
-java -Xms128m -Xmx128m -cp target/jargon2-examples-1.0.0.jar com.kosprov.jargon2.examples.MultiThreadedHashVerifyLoop \
+java -Xms128m -Xmx128m -cp target/jargon2-examples-1.0.1.jar com.kosprov.jargon2.examples.MultiThreadedHashVerifyLoop \
     --runtime 7200 \
     --collectStats 60 \
     --javaThreads 4 \
