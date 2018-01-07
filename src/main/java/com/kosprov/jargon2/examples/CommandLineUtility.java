@@ -1,8 +1,7 @@
 package com.kosprov.jargon2.examples;
 
 import org.apache.commons.cli.*;
-
-import javax.xml.bind.DatatypeConverter;
+import org.apache.commons.codec.binary.Hex;
 
 import static com.kosprov.jargon2.api.Jargon2.*;
 
@@ -162,7 +161,7 @@ public class CommandLineUtility {
 
             if (verbose || rawOnly) {
                 byte[] rawHash = hasher.salt(salt).password(password).rawHash();
-                rawHashHex = DatatypeConverter.printHexBinary(rawHash).toLowerCase();
+                rawHashHex = Hex.encodeHexString(rawHash).toLowerCase();
             }
 
             if (verbose || encodedOnly) {
