@@ -2,7 +2,7 @@
 
 mvn -f ../../pom.xml clean package;
 
-java -Xms2048m -Xmx2048m -cp ../../target/jargon2-examples-1.0.1.jar com.kosprov.jargon2.examples.MultiThreadedHashVerifyLoop \
+java -Xms2048m -Xmx2048m -cp ../../target/jargon2-examples-1.1.0.jar com.kosprov.jargon2.examples.MultiThreadedHashVerifyLoop \
     --runtime 7200 \
     --collectStats 60 \
     --javaThreads 4 \
