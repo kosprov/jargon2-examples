@@ -2,6 +2,7 @@ package com.kosprov.jargon2.examples;
 
 import org.apache.commons.cli.*;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.LongSummaryStatistics;
 import java.util.Random;
@@ -176,8 +177,8 @@ public class StressTest {
 
     private static void warmUp(boolean raw, Hasher hasher, Verifier verifier) throws Exception {
         System.out.println("Warming up...");
-        byte[] password = "a password value".getBytes("UTF-8");
-        byte[] salt = "a salt value".getBytes("UTF-8");
+        byte[] password = "a password value".getBytes(StandardCharsets.UTF_8);
+        byte[] salt = "a salt value".getBytes(StandardCharsets.UTF_8);
         for (int i = 0; i < 5000; i++) {
             boolean match;
             if (raw) {
