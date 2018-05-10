@@ -17,7 +17,7 @@ import static com.kosprov.jargon2.api.Jargon2.*;
  * </p>
  * <pre>
  *     $ mvn clean package
- *     $ echo -n "password" | java -jar target/jargon2-examples-1.1.0.jar somesalt -t 2 -m 16 -p 4 -l 24
+ *     $ echo -n "password" | java -jar target/jargon2-examples-1.1.1.jar somesalt -t 2 -m 16 -p 4 -l 24
  * </pre>
  * <p>
  *     Outputs:
